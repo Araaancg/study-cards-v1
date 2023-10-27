@@ -1,0 +1,28 @@
+{%extends "base.html"%}
+
+{%block head%}
+<title>PFM | Comunidad</title>
+<script src="{{url_for('static',filename='base.js')}}"></script>
+<link rel="stylesheet" href="{{url_for('static',filename='comunity.css')}}">
+{%endblock%}
+
+{%block content%}
+<h1>PRÓXIMAMENTE</h1>
+<main id="main">
+    <div class="left">
+        <img src="../static/img/status.png" alt="sección de estatus del formulario de creación de paquetes">
+    </div>
+    <div class="right">
+        <h2>COMPARTIENDO CREAMOS UNA COMUNIDAD</h2>
+        <p>
+            En un futuro muy cercano este apartado servirá como la base de una pequeña comunidad de estudiantes. Aquí se podrán ver todos 
+            los paquetes con estatus 'público', se podrán consultar e incluso podrás acceder a las flashcards para poder estudiar las tarjetas
+            Tú mismo podrás aportar tu granito de arena poniendo tus paquetes en público.
+        </p>
+        <p>
+            Para indicar el status de cada paquete solo tendrás que seleccionar el más quieras en el apartado de estatus del 
+            formulario de creación de paquetes. Por defecto se pondrá en 'privado'
+        </p>
+    </div>
+</main>
+{%endblock%}

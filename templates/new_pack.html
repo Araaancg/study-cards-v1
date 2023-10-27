@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+
+{%block head%}
+<title>PFM | Crear paquete</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{url_for('static',filename='new_pack.js')}}"></script>
+<link rel="stylesheet" href="{{url_for('static',filename='new_pack.css')}}">
+{%endblock%}
+
+{%block content%}
+<h1>Nuevo paquete</h1>
+<main id="main"></main>
+{%endblock%}

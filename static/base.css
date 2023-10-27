@@ -1,0 +1,78 @@
+:root {
+    --purple-pastel: #ce97fd;
+    --green-pastel: #6bd59a;
+    --yellow-pastel: #fddf7e;
+    --main-bg-color: #2e2e2e;
+    --nav-bar-color: #1c1c1c;
+    --color-text: #f5f9e9;
+    --color-delete: #ff1930;
+    --msg-color: #b3bfb8;
+    --color-hover: #404e5c;
+    --input-color: #f5f9e9;
+}
+
+body.light {
+    --main-bg-color: #fff;
+    --color-text: #000; 
+    --yellow-pastel: #ffb703;
+    --purple-pastel: #7b2cbf;
+    --green-pastel: #007200;
+    --msg-color: #474747;
+    --color-hover: #c4c4c4;
+    --input-color: #fff;
+    --nav-bar-color: #d1d1d1;
+}
+
+
+.nav-item {
+    margin: 0 1em 0;
+}
+
+.x_nav-color  {
+    background-color: var(--nav-bar-color);
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+.dropdown > ul {
+    background-color: var(--nav-bar-color);
+}
+
+.dropdown-item {
+    color: var(--color-text);
+}
+
+.dropdown-item:hover {
+    color: var(--color-hover);
+}
+
+#right {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-item:active {
+        text-decoration: underline var(--color-text);
+        border: none;
+    }
+
+    #left {
+        display: none;
+    }
+
+    #right {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .nav-item:hover {
+        text-decoration: underline var(--color-text);
+    }
+
+    .nav-item:active {
+        border: none
+    }
+}

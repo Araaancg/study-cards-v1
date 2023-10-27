@@ -1,0 +1,656 @@
+:root {
+    --purple-pastel: #ce97fd;
+    --green-pastel: #6bd59a;
+    --yellow-pastel: #fddf7e;
+    --main-bg-color: #2e2e2e;
+    --nav-bar-color: #1c1c1c;
+    --color-text: #f5f9e9;
+    --color-delete: #ff1930;
+    --msg-color: #b3bfb8;
+    --color-hover: #404e5c;
+    --input-color: #f5f9e9;
+}
+
+body.light {
+    --main-bg-color: #fff;
+    --color-text: #000;
+    --yellow-pastel: #ffb703;
+    --purple-pastel: #7b2cbf;
+    --green-pastel: #007200;
+    --msg-color: #474747;
+    --color-hover: #c4c4c4;
+    --input-color: #fff;
+    --nav-bar-color: #d1d1d1;
+}
+
+html, body {
+    height: 100%;
+    color: var(--color-text);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+#main {
+    height: 100%;
+}
+
+/* PROFILE */
+
+h1 {
+    text-align: center;
+    margin-top: 2%;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 2%;
+}
+
+hr {
+    width: 60%;
+    margin: auto;
+}
+
+#user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 1em;
+    padding: 0.5em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#email-div > p {
+    margin: 0;
+    font-size: larger;
+}
+
+#pass-div > p {
+    width: 50%;
+    text-align: center;
+    margin: 0;
+    color: var(--msg-color);
+}
+
+#btn-email {
+    background-color: transparent;
+    color: var(--color-text);
+    border: none;
+}
+
+#btn-email:hover {
+    text-decoration: underline var(--color-text);
+}
+
+input {
+    width: 20em;
+    border: 0.15em solid var(--color-hover);
+    background-color: var(--input-color);
+    text-align: center;
+}
+
+#btn-change-pw {
+    background-color: transparent;
+    border: 0.15em solid var(--color-text);
+    color: var(--color-text);
+}
+
+#btn-change-pw:hover {
+    background-color: var(--color-hover);
+}
+
+#change-pw {
+    margin-top: 1em;    
+}
+
+#form-e {
+    display: flex;
+    flex-direction: column;
+}
+
+form > button {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 0.15em solid var(--color-text);
+}
+
+form > button:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--color-text);
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#btn-logout, #btn-delete-user {
+    background-color: transparent;
+    width: fit-content;
+    color: var(--color-text);
+    border: var(--color-text) 0.15em solid;
+}
+
+#btn-delete-user {
+    border-color: var(--color-delete);
+    border-style: solid;
+}
+
+#btn-logout:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--color-text);
+}
+
+#btn-delete-user:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--color-delete);
+}
+
+/* ASIDE  */
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-aside {
+    margin: .5em 1em .5em;
+    background-color: transparent;
+    color: var(--color-text);
+    border: none;
+}
+
+.showing {
+    border-bottom: 0.2em solid var(--color-text);
+}
+
+/* CARDS DIV */
+#cards-main.no-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.no-cards {
+    text-align: center;
+    width: fit-content;
+    color: var(--msg-color);
+}
+
+button.no-cards {
+    border: .15em solid var(--yellow-pastel);
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+button.no-cards:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--yellow-pastel);
+}
+
+.cards-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cards-main {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+}
+
+.single-card {
+    border: .3em solid var(--yellow-pastel);
+    width: 90%;
+    margin: .5em;
+}
+
+/* div delete card */
+.div-delete-card {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-delete-card {
+    background-color: transparent;
+    border: none;
+    color: var(--yellow-pastel);
+}
+
+.btn-delete-card:hover {
+    color: var(--color-delete);
+}
+
+/* div info card */
+.div-info-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-info-card > p {
+    margin: .5em;
+    text-align: center;
+}
+
+.div-info-card > hr {
+    width: 75%;
+    color: var(--yellow-pastel);
+}
+
+/* div pack as */
+.div-as-pack {
+    width: 90%;
+    margin: auto;
+}
+
+.div-as-pack > p {
+    border-top: .2em solid var(--yellow-pastel);
+    text-align: center;
+}
+
+/* edit card div  */
+.div-edit {
+    display: flex;
+    justify-content: center;
+}
+
+.div-edit > button {
+    background-color: transparent;
+    border: none;
+    color: var(--msg-color);
+}
+
+.div-edit > button:hover {
+    text-decoration: underline var(--msg-color);
+}
+
+/* OVERLAY */
+.overlay {
+    background-color: rgb(0,0,0,.85);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-card-popup {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* left card edit */
+.left-card {
+    background-color: var(--main-bg-color);
+    border: .3em solid var(--purple-pastel);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: .8em;
+}
+
+.left-card > p {
+    margin: 1em 0;
+    text-align: center;
+    width: 90%;
+}
+
+.left-card > hr {
+    margin: .5em 0;
+}
+
+/* right card div edit  */
+.right-card {
+    border: .3em solid var(--purple-pastel);
+    background-color: var(--main-bg-color);
+    display: flex;
+    height: 100%;
+    
+    flex-direction: column;
+    width: 90%;
+    overflow: auto;
+}
+
+.edit-card-div {
+    border-bottom: .15em solid var(--purple-pastel);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    padding: .5em 0;
+}
+
+.edit-card-div > hr {
+    margin: 1em 0;
+}
+
+.edit-card-div > textarea {
+    width: 90%;
+    text-align: center;
+}
+
+.edit-pack-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .5em 0;
+}
+
+/* div with buttons from edit div */
+.div-edit-buttons {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.div-edit-buttons > button {
+    margin: 1em 2em;
+    background-color: var(--main-bg-color);
+    border: .15em solid var(--purple-pastel);
+    color: var(--color-text);
+}
+
+.div-edit-buttons > button:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--purple-pastel);
+}
+
+/* lista de paquetes */
+h4 {
+    text-align: center;
+}
+
+li::marker {
+    color: var(--purple-pastel);
+}
+
+li > button {
+    background-color: transparent;
+    color: var(--color-text);
+    border: none;
+    margin-left: .5em;
+}
+
+li > button:hover {
+    color: var(--color-delete);
+}
+
+.btn-add-pack {
+    background-color: transparent;
+    border: none;
+    color: var(--msg-color);
+}
+
+.btn-add-pack:hover {
+    text-decoration: underline var(--msg-color);
+}
+
+.div-list-pack {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-list-pack > button {
+    background-color: transparent;
+    border: none;
+    color: var(--msg-color);
+}
+
+.div-list-pack > button:hover {
+    text-decoration: underline var(--msg-color);
+}
+
+.div-list-pack > select {
+    width: 90%;
+}
+
+.msg {
+    text-align: center;
+    color: var(--msg-color);
+}
+
+/* SISTEMA DE FILTRADO */
+.section {
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section > p {
+    text-align: center;
+}
+
+#cards-aside {
+    width: 90%;
+    border-bottom: 0.05em solid var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#filter {
+    border-radius: 2%;
+    padding: .5em;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+#filter > p {
+    display: none;
+}
+
+#btn-filter {
+    border: 2px solid var(--green-pastel);
+    color: var(--color-text);
+    width: fit-content;
+    padding: 1%;
+    background-color: transparent;
+}
+
+#btn-filter:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--green-pastel);
+}
+
+.filter-input {
+    background-color: var(--main-bg-color);
+    color: var(--color-text);
+    border: .15em solid var(--green-pastel);
+    margin: 0 0 .5em;
+}
+
+
+/* THEME DIV */
+.theme-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.themes {
+    border: .3em solid var(--nav-bar-color);
+    margin: 2em 0;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.themes > p {
+    text-align: center;
+    font-size: 500%;
+}
+
+#dark.theme-selected {
+    border-color: var(--purple-pastel);
+}
+
+#dark.theme-selected > p {
+    color: var(--purple-pastel);
+}
+
+#light.theme-selected {
+    border-color: var(--yellow-pastel);
+}
+
+#light.theme-selected > p {
+    color: var(--yellow-pastel);
+}
+
+@media screen and (min-width: 600px) {
+    .theme-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .cards-div {
+        height: 100%;
+    }
+
+    /* #cards-aside {
+        width: 25%;
+        border-right: 0.05em solid var(--color-text);
+        border-bottom: none;
+    }
+
+    #filter {
+        border: .3em solid var(--green-pastel);
+        flex-direction: column;
+        padding: 2em 0;
+    }
+
+    #filter > p {
+        display: block;
+    }
+
+    .cards-div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .single-card {
+        border: .3em solid var(--yellow-pastel);
+        width: fit-content;
+        min-width: 45%;
+        max-width: 50%;
+        margin: .5em;
+    } */
+}
+
+@media screen and (min-width: 900px) {
+    #cards-aside {
+        width: 25%;
+        height: 100%;
+        border-right: 0.05em solid var(--color-text);
+        border-bottom: none;
+    }
+
+    #filter {
+        border: .3em solid var(--green-pastel);
+        flex-direction: column;
+        padding: 2em 0;
+    }
+
+    #filter > p {
+        display: block;
+    }
+
+    .cards-div {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .single-card {
+        border: .3em solid var(--yellow-pastel);
+        width: fit-content;
+        min-width: 45%;
+        max-width: 50%;
+        margin: .5em;
+    }
+    .single-card {
+        min-width: 25%;
+    }
+
+    .edit-pack-div { 
+        padding: 0;
+    }
+
+    .edit-card-popup {
+        width: 60%;
+        height: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-card {
+        width: fit-content;
+        min-width: 30%;
+        height: 100%;
+        margin: 1em;
+    }
+
+    .right-card {
+        width: fit-content;
+        min-width: 60%;
+        flex-direction: row;
+        overflow: none;
+    }
+
+    .edit-card-div {
+        width: 50%;
+        padding: 0;
+    }
+
+    .edit-pack-div {
+        width: 50%;
+        padding: 0;
+    }
+}

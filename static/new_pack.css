@@ -1,0 +1,370 @@
+:root {
+    --purple-pastel: #ce97fd;
+    --green-pastel: #6bd59a;
+    --yellow-pastel: #fddf7e;
+    --main-bg-color: #2e2e2e;
+    --nav-bar-color: #1c1c1c;
+    --color-text: #f5f9e9;
+    --color-delete: #ff1930;
+    --msg-color: #b3bfb8;
+}
+
+body.light {
+    --main-bg-color: #fff;
+    --color-text: #000;
+    --yellow-pastel: #ffb703;
+    --purple-pastel: #7b2cbf;
+    --green-pastel: #007200;
+    --msg-color: #474747;
+    --color-hover: #c4c4c4;
+    --input-color: #fff;
+    --nav-bar-color: #d1d1d1;
+}
+
+h1,h2 {
+    color: var(--color-text);
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+}
+
+#main {
+    margin-top: 1em;
+}
+
+form {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* LEFT SECTION */
+
+#left-section {
+    height: 100%;
+    width: fit-content;
+    margin: auto;
+    border-bottom: 0.1em solid var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-text);
+    margin-bottom: 1em;
+}
+
+#left-section > div {
+    margin-bottom: 0.5em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#left-section > div > input {
+    border: .15em solid var(--nav-bar-color);
+    background-color: var(--input-color);
+    text-align: center;
+}
+
+#name-input {
+    height: 25%;
+}
+
+#category-input {
+    height: 50%;
+}
+
+#status-input {
+    height: 25%;
+}
+
+.existing-categories {
+    margin-top: 0.25em;
+}
+
+#private-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#public-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#public-categories > button, #private-categories > button {
+    background-color: transparent;
+    color: var(--color-text);
+    border: 0.15em solid var(--green-pastel);
+    margin: .25em 0.5em 0em;
+    border-radius: 0.5em
+}
+
+hr {
+    margin: .5em 0;
+    width: 100%;
+}
+
+#public-categories > button:hover, #private-categories > button:hover {
+    background-color: var(--color-hover);
+}
+
+.btn-status {
+    margin: 0.5em 0.5em 0;
+    background-color: transparent;
+    color: var(--color-text);
+    border: 0.15em solid var(--yellow-pastel);
+}
+
+.btn-status:hover {
+    background-color: var(--color-hover);
+}
+
+.btn-clicked {
+    background-color: var(--yellow-pastel);
+    color: var(--nav-bar-color);
+}
+
+.btn-clicked:hover {
+    background-color: var(--color-text);
+} 
+
+/* RIGHT SECTION */
+
+#right-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cards {
+    overflow: auto;
+}
+
+.cards > div {
+    margin: 0.5em;
+}
+
+.cards > div > input {
+    border: .15em solid var(--nav-bar-color);
+    margin: 0 .1em;
+    background-color: var(--input-color);
+    text-align: center;
+}
+
+#btn-more-cards {
+    background-color: transparent;
+    border: .15em solid var(--yellow-pastel);
+    color: var(--color-text);
+    width: fit-content;
+    margin: 1em auto;
+}
+
+#btn-more-cards:hover {
+    background-color: var(--color-hover);
+}
+
+/* BTN SUBMIT */
+#down-section {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}   
+
+#down-section > button {
+    border: 0.15em solid var(--yellow-pastel);
+    color: var(--color-text);
+    background-color: transparent;
+    width: fit-content;
+    padding: 0.5%;
+}
+
+#down-section > button:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--yellow-pastel);
+}
+
+.msg {
+    margin: 0 0 1em;
+    color: var(--msg-color);
+}
+
+/* POPUP */
+.btn-existing-card {
+    border: .15em solid var(--yellow-pastel);
+    color: var(--color-text);
+    background-color: transparent;
+    width: fit-content;
+    margin: 0 auto 1em;
+}
+
+.btn-existing-card:hover {
+    background-color: var(--color-hover);
+}
+
+.overlay {
+    background: rgb(0,0,0,.85);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popup {
+    border: .3em solid var(--purple-pastel);
+    background: var(--main-bg-color);
+    width: 50%;
+    height: 80%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.single-card {
+    border: .15em solid var(--nav-bar-color);
+    color: var(--color-text);
+    min-width: 30%;
+    margin: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-card > p {
+    margin: .5em;
+    text-align: center;
+}
+
+.single-card > hr {
+    width: 75%;
+    margin: .5em;
+}
+
+.btn-confirm {
+    background-color: var(--main-bg-color);
+    border: .15em solid var(--purple-pastel);
+    color: var(--color-text);
+    margin: 1em ;
+}
+
+.btn-confirm:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--purple-pastel);
+}
+
+.card-selected {
+    border: .15em solid var(--purple-pastel);
+}
+
+
+@media screen and (min-width: 768px) {
+    #main {
+        height: calc(100% - 120px);
+        margin-top: 1em;
+        /* margin: 0 1em 0; */
+    }
+
+    form {
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #left-section {
+        border-right: 1px solid var(--color-text);
+        width: 35%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--color-text);
+        border-bottom: none;
+        padding: 0.5em;
+    }
+
+    #name-input {
+        height: 10%;
+    }
+    
+    #category-input {
+        height: 20%;
+    }
+    
+    #status-input {
+        height: 10%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #main {
+        height: calc(100% - 120px);
+        margin-top: none;
+        margin: none;
+    }
+
+    form {
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cards {
+        overflow: auto;
+    }
+
+    #left-section {
+        border-right: 1px solid var(--color-text);
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--color-text);
+        border-bottom: none;
+        padding: none;
+    }
+
+    #name-input {
+        height: 25%;
+    }
+    
+    #category-input {
+        height: 50%;
+    }
+    
+    #status-input {
+        height: 25%;
+    }
+
+    #right-section {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        width: 100%;
+       overflow: auto;
+    }
+}
+
+
+
+
+
+
+
+

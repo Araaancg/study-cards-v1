@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+
+{%block head%}
+<title>PFM | Flash-cards: {{pack_name}}</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{url_for('static',filename='flash_cards.js')}}"></script>
+<link rel="stylesheet" href="{{url_for('static',filename='flash_cards.css')}}">
+{%endblock%}
+
+{%block content%}
+<h1>Flash cards</h1>
+{%endblock%}

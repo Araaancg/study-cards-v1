@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+
+:root {
+    --purple-pastel: #ce97fd;
+    --green-pastel: #6bd59a;
+    --yellow-pastel: #fddf7e;
+    --main-bg-color: #2e2e2e;
+    --nav-bar-color: #1c1c1c;
+    --color-text: #f5f9e9;
+    --color-delete: #ff1930;
+    --msg-color: #b3bfb8;
+    --color-hover: #404e5c;
+    --input-color: #f5f9e9;
+}
+
+body.light {
+    --main-bg-color: #fff;
+    --color-text: #000;
+    --yellow-pastel: #ffb703;
+    --purple-pastel: #7b2cbf;
+    --green-pastel: #007200;
+    --msg-color: #474747;
+    --color-hover: #c4c4c4;
+    --input-color: #fff;
+    --nav-bar-color: #d1d1d1;
+}
+
+html, body {
+    height: 100%;
+    color: var(--color-text);
+}
+
+h1 {
+    text-decoration: underline var(--color-delete);
+}
+
+h1,h2 {
+    font-family: 'Muli', sans-serif;
+    text-align: center;
+    margin: .5em;
+}
+
+#main {
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+img {
+    border: .3em solid var(--yellow-pastel);
+}

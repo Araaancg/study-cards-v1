@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='signup.css')}}">  
+    <script src="{{url_for('static',filename='base.js')}}"></script>
+    <title>PFM | Registro</title>
+</head>
+<body>
+    <h1>Registro</h1>
+<form method="post">
+    <div class="input">
+        <label for="name">Nombre</label>
+        <input type="text" placeholder="ejemplo_1" required id="name" name="name">
+        {%if msg["error"] == 1%}
+            <span class="msg">{{msg["msg"]}}</span>
+        {%endif%}
+    </div>
+    <div class="input">
+        <label for="email">Email</label>
+        <input type="email" placeholder="ejemplo@email.com" required id="email" name="email">
+        {%if msg["error"] == 2%}
+            <span class="msg">{{msg["msg"]}}</span>
+        {%endif%}
+    </div>
+    <div class="input">
+        <label for="pwd">Contraseña</label>
+        <input type="password" placeholder="contraseña" required id="pwd" name="pwd">
+        <label for="pwd2">Repite la contraseña</label>
+        <input type="password" placeholder="repite la contraseña" required id="pwd2" name="pwd2">
+        {%if msg["error"] == 3%}
+            <span class="msg">{{msg["msg"]}}</span>
+        {%endif%}
+    </div>
+    <div class="btn-submit">
+        <button type="submit">Registrarse</button>
+    </div>
+</form>
+</body>
+</html>

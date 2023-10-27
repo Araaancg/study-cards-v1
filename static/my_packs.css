@@ -1,0 +1,241 @@
+:root {
+    --purple-pastel: #ce97fd;
+    --green-pastel: #6bd59a;
+    --yellow-pastel: #fddf7e;
+    --main-bg-color: #2e2e2e;
+    --nav-bar-color: #1c1c1c;
+    --color-text: #f5f9e9;
+}
+
+body.light {
+    --main-bg-color: #fff;
+    --color-text: #000;
+    --yellow-pastel: #ffb703;
+    --purple-pastel: #7b2cbf;
+    --green-pastel: #007200;
+    --msg-color: #474747;
+    --color-hover: #c4c4c4;
+    --input-color: #fff;
+    --nav-bar-color: #d1d1d1;
+}
+
+html, body {
+    height: 100%;
+    color: var(--color-text);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+}
+
+#main {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.aside {
+    width: 100%;
+    margin: 1em 0 0.2em;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.section {
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section > p {
+    text-align: center;
+}
+
+#btn-create-new {
+    border: 2px solid var(--yellow-pastel);
+    color: var(--color-text);
+    width: fit-content;
+    padding: 1%;
+    background-color: transparent;
+}
+
+#btn-create-new:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--yellow-pastel);
+}
+
+#btn-filter {
+    border: 2px solid var(--green-pastel);
+    color: var(--color-text);
+    width: fit-content;
+    padding: 1%;
+    background-color: transparent;
+}
+
+#btn-filter:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--green-pastel);
+}
+
+.filter-input {
+    background-color: var(--main-bg-color);
+    color: var(--color-text);
+    border: .15em solid var(--green-pastel);
+    margin: 0 0 .5em;
+}
+
+h2 {
+    text-align: center;
+}
+
+.no-packs {
+    text-align: center;
+    color: var(--msg-color);
+    width: fit-content;
+    margin: auto;
+}
+
+.packages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.single-package {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 2px;
+    border: .15em solid var(--purple-pastel);
+}
+
+.single-package > button {
+    border: .15em solid var(--purple-pastel);
+    color: var(--color-text);
+    background: none;
+    width: fit-content;
+    margin: auto;
+    border-radius: 5%;
+    margin-bottom: 0.2em;
+}
+
+.single-package > button:hover {
+    background-color: var(--color-hover);
+}
+
+.single-package > a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.single-package > a:hover {
+    text-decoration: underline var(--color-text);
+}
+
+.info-pack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5em;
+}
+
+hr {
+    margin: 0 1em 0.5em 1em;
+    color: var(--purple-pastel);
+}
+
+table {
+    width: auto;
+    margin: 0.75em auto 0.75em;
+    border-collapse: collapse;
+}
+
+th, td, tr {
+    border: 1px solid var(--color-text);
+    padding: 0.5em;
+}
+
+th {
+    border: 1px solid var(--color-text);
+}
+
+td, th {
+    color: var(--color-text);
+}
+
+th {
+    background-color: var(--purple-pastel);
+    color: var(--nav-bar-color);
+}
+
+@media  screen and (min-width:770px) {
+    #main {
+        display: flex;
+        flex-direction: row;
+        height: 87%;
+    }
+
+    .aside {
+        width: 25%;
+        margin-top: 2em;
+        border-right: 0.05em solid var(--color-text);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #create {
+        border: .3em solid var(--yellow-pastel);
+        border-radius: 2%;
+        width: 80%;
+        padding: 2em 0;
+    }
+
+    #filter {
+        border: .3em solid var(--green-pastel);
+        border-radius: 2%;
+        width: 80%;
+        padding: 2em 0;
+    }
+
+    .filter-input {
+        width: 90%;
+    }
+
+    .section {
+        width: 100%;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section > p {
+        text-align: center;
+    }
+
+    .packages {
+        width: 75%;
+        height: 100%;
+    }
+
+    .all-packages {
+        height: 87%;
+        overflow: auto;
+    }
+
+    
+    .info-pack {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+}

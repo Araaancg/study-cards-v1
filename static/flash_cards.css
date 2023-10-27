@@ -1,0 +1,397 @@
+:root {
+    --purple-pastel: #ce97fd;
+    --green-pastel: #6bd59a;
+    --yellow-pastel: #fddf7e;
+    --main-bg-color: #2e2e2e;
+    --nav-bar-color: #1c1c1c;
+    --color-text: #f5f9e9;
+    --color-delete: #ff1930;
+    --msg-color: #b3bfb8;
+    --color-hover: #404e5c;
+    --input-color: #f5f9e9;
+}
+
+body.light {
+    --main-bg-color: #fff;
+    --color-text: #000;
+    --yellow-pastel: #ffb703;
+    --purple-pastel: #7b2cbf;
+    --green-pastel: #007200;
+    --msg-color: #474747;
+    --color-hover: #c4c4c4;
+    --input-color: #fff;
+    --nav-bar-color: #d1d1d1;
+}
+
+html, body {
+    height: 100%;
+    color: var(--color-text);
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+/* ELEMENTOS PRINCIPALES */
+
+#main {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+#aside-left {
+    display: none;
+}
+
+#aside-left, #aside-right {
+    width: 100%;
+}
+
+#center-div {
+    width: 100%;
+}
+
+/* ///////////////// */
+
+/* CENTER DIV */
+#center-div {
+    border-bottom: 0.15em solid var(--color-hover);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#cheader, #cfooter {
+    height: 20%;
+}
+
+#cbody {
+    height: 60%;
+}
+#cbody {
+    margin: 1em 0 1em;
+    height: fit-content;
+}
+
+#main-spans {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* flip effect + FLASHCARD */
+#flashcard {
+    display: block; 
+    position: relative;
+    width: 80%;
+    height: 0;
+    padding-bottom: 80%;
+    margin: auto;
+}
+
+.fcelements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0.25em solid #f8961e;
+    border: 0.25em solid #1c1c1c;
+    background-color: #f9c74f;
+    background-color: #b3bfb8;
+    border-radius: 2%;
+    color: black;
+    font-size: 150%;
+}
+
+.ongoing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.card-sides {
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-sides > p {
+    text-align: center;
+}
+
+.flipper {
+    transform: rotateY(180deg);
+    border: .25em solid #1c1c1c;
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #f9c74f;
+    background-color: #b3bfb8;
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #b3bfb8;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.dissabled {
+    opacity: 50%;
+}
+
+/* start div */
+.start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-start {
+    background-color: transparent;
+    border: 0.15em solid #f8961e;
+    border: 0.15em solid #1c1c1c;
+    color: black;
+    transition: 0.3s;
+}
+
+#btn-start:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em #f8961e;
+    box-shadow: 0 0.5em 0.5em -0.4em #1c1c1c;
+}
+
+/* end div */
+.end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.end > button {
+    margin: 0.7em 0 0.7em;
+    background-color: transparent;
+    border: 0.15em solid #f8961e;
+    border: 0.15em solid #1c1c1c;
+    color: black;
+    transition: 0.3s;
+}
+
+.end > button:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em #f8961e;
+    box-shadow: 0 0.5em 0.5em -0.4em #1c1c1c;
+}
+
+/* //////////// FOOTER CENTER DIV, CONTROLS OF FLASHCARD///////////// */
+#cfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#cfooter > button {
+    width: fit-content;
+    font-size: 300%;
+    background-color: transparent;
+    border: none;
+    color: var(--yellow-pastel);
+    margin: 0 1em 0;
+}
+
+/* ASIDE RIGHT  */
+#aside-right {
+    width: 50%;
+    margin: auto;
+}
+#aside-right {
+    width: 100%;
+    margin: auto;
+}
+
+h3 {
+    margin-top: 0.5em;
+}
+
+hr {
+    margin: 1em 1em 0.5em 1em;
+    color: var(--purple-pastel);
+}
+
+.right {
+    padding: 0.5em;
+    margin: 1em 0 1em;
+}
+
+#switch-div > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#switch-div > p, #shuffle-div > p {
+    text-align: center;
+}
+
+#shuffle-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-btn {
+    background-color: transparent;
+    /* border: 0.15em solid var(--color-text); */
+    border: 0.15em solid var(--purple-pastel);
+    color: var(--color-text);
+}
+
+.right-btn:hover {
+    background-color: var(--color-hover);
+}
+
+.btn-clicked, .btn-clicked:hover {
+    background-color: var(--purple-pastel);
+    color: var(--nav-bar-color);
+}
+
+/* ASIDE LEFT */
+#aside-left {
+    height: 100%;
+}
+
+.div-left {
+    margin: 1em 0 1em;
+}
+
+#changing-div {
+    height: 80%;
+    overflow: auto;
+}
+
+#div-btn-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-left {
+    background-color: transparent;
+    border: none;
+    color: var(--color-text);
+}
+
+.lclicked {
+    border-bottom: 0.2em solid var(--green-pastel);
+}
+
+/* LIST PACKS*/
+.list-item > a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 120%
+}
+
+.list-item > a:hover {
+    color: var(--color-text);
+    text-decoration: underline var(--color-text);
+}
+
+/* LIST CARDS */
+#div-show-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lcard {
+    border: 0.15em solid var(--nav-bar-color);
+    border-radius: 0.6em;
+    width: 90%;
+    padding: 0.1em;
+    margin: .3em 0 .3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.lcard > p {
+    margin: 0.1em 0 0.1em;
+    text-align: center;
+    width: 50%;
+}
+
+.current-card {
+    border: 0.15em solid var(--green-pastel);
+}
+
+@media screen and (min-width: 760px) {
+    #flashcard {
+        width: 60%;
+        padding-bottom: 60%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #main {
+        display: flex;
+        flex-direction: row;
+        height: 80%;
+    }
+
+    #center-div {
+        border: 0.15em solid var(--nav-bar-color);
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #aside-left {
+        display: block;
+    }
+
+    #aside-right {
+        border: 0.2em solid var(--purple-pastel); 
+    }
+
+    #aside-left {
+        border: 0.2em solid var(--green-pastel);
+    }
+
+    .main-elements {
+        margin: 0 .5em 0; 
+        border-radius: 0.3em; 
+    }
+
+    #aside-left, #aside-right {
+        height: 100%;
+        width: 23%;
+    }
+
+    #center-div {
+        height: 100%;
+        width: 50%;
+    }
+
+    #flashcard {
+        width: 45%;
+        padding-bottom: 45%;
+    }
+
+    li::marker {
+        color: var(--green-pastel);
+    }
+}

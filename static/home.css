@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+
+:root {
+    --purple-pastel: #ce97fd;
+    --green-pastel: #6bd59a;
+    --yellow-pastel: #fddf7e;
+    --main-bg-color: #2e2e2e;
+    --nav-bar-color: #1c1c1c;
+    --color-text: #f5f9e9;
+    --color-delete: #ff1930;
+    --msg-color: #b3bfb8;
+    --color-hover: #404e5c;
+    --input-color: #f5f9e9;
+}
+
+body.light {
+    --main-bg-color: #fff;
+    --color-text: #000;
+    --yellow-pastel: #ffb703;
+    --purple-pastel: #7b2cbf;
+    --green-pastel: #007200;
+    --msg-color: #474747;
+    --color-hover: #c4c4c4;
+    --input-color: #fff;
+    --nav-bar-color: #d1d1d1;
+}
+
+html, body {
+    height: 100%;
+    color: var(--color-text);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 80%; */
+}
+
+/* GENERAL */
+.containers {
+    border: .3em solid var(--yellow-pastel);
+    margin: 1em;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: .5em;
+}
+
+.left {
+    display: none;
+}
+
+img {
+    display: none;
+}
+
+.right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-size: 85%;
+}
+
+/* FIRST */
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons > a > button {
+    border: .15em solid var(--yellow-pastel);
+    background-color: transparent;
+    color: var(--color-text);
+    margin: .3em 0;
+}
+
+.buttons > a > button:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--yellow-pastel);
+}
+
+/* SECOND */
+
+#second {
+    display: flex;
+    flex-direction: row-reverse;
+    border: .3em solid var(--green-pastel);
+}
+
+#second > .left > img {
+    width: 60%;
+    height: 80%;
+}
+
+
+/* THIRD */
+#third {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: .3em solid var(--purple-pastel);
+}
+
+#third > .center {
+    width: 100%;
+}
+
+.center > p > a > button {
+    border: .15em solid var(--purple-pastel);
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+.center > p > a > button:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--purple-pastel);
+}
+
+/* FOURTH  */
+#fourth {
+    display: flex;
+    flex-direction: column-reverse;
+    border: .3em solid var(--msg-color);
+}
+
+#fourth > div {
+    width: 100%;
+}
+
+#fourth > div > img {
+    width: 45%;
+    border: .3em solid var(--msg-color);
+    padding: 2%;
+}
+
+#fourth > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (min-width: 1000px) {
+    .containers {
+        border: .3em solid var(--yellow-pastel);
+        margin: 1em;
+        width: 80%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        padding: .5em;
+    }
+
+    .left {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .right {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .buttons > a > button {
+        border: .15em solid var(--yellow-pastel);
+        background-color: transparent;
+        color: var(--color-text);
+    }
+
+    #third > .left {
+        width: 47%;
+    }
+
+    #third > .center {
+        width: 40%;
+    }
+}

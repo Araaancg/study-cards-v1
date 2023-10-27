@@ -1,0 +1,75 @@
+{%extends "base.html"%}
+
+{%block head%}
+<title>Home</title>
+<link rel="stylesheet" href="{{url_for('static',filename='home.css')}}">
+{%endblock%}
+
+{%block content%}
+<main id="main">
+    <!-- <h1>BIENVENIDX {{user_name.upper()}}</h1> -->
+    <container class="containers" id="first">
+        <div class="left">
+            <img src="../static/img/newpackform.png" alt="formulario para crear paquetes">
+        </div>
+        <div class="right">
+            <h2>EMPIEZA A CREAR</h2>
+            <p>
+                Empieza creando tu primer paquete de vocabulario. Necitarás un nombre, una categoría y tus tarjetas.
+            </p>
+            <div class="buttons">
+                <a href="http://localhost:5000/mis_paquetes/nuevo"><button type="button">Crear nuevo paquete</button></a>
+                <a href="http://localhost:5000/mis_paquetes"><button type="button">Consultar MIS PAQUETES</button></a>
+            </div>
+        </div>
+    </container>
+    <container class="containers" id="second">
+        <div class="left">
+            <img src="../static/img/categories.png" alt="categorias del formulario">
+        </div>
+        <div class="right">
+            <h2>CATEGORÍAS</h2>
+            <p>
+                Las categorías son una simple y eficiente forma de clasificar todos tus paquetes. Por defecto hay categorías ya creadas, públicas, 
+                pero tú puedes crear las tuyas propias. Tan solo tienes que introducir un nombre nuevo en el apartado de categorías al crear tu 
+                paquete nuevo y <i>voilá</i>, ahí tienes tu categoría nueva. También son la manera perfecta de filtrar tus paquetes para 
+                encontrarlos más rápido.
+            </p>
+        </div>
+    </container>
+    <container class="containers" id="third">
+        <div class="left">
+            <img src="../static/img/flashcards.png" alt="flash_cards">
+        </div>
+        <div class="center">
+            <h2><i>FLASH-CARDS</i></h2>
+            <p>
+                Accede al apartado de las <i>flash-cards</i>, selecciona un paquete y a estudiar.
+            </p>
+            <p>
+                En el centro de la pantalla tendrás las <i>flash-cards</i>, en cuanto le des a empezar podrás navegarlas con las flechas de abajo.
+                El botón central sirve para dar la vuelta y ver la cara b. En la parte de la derecha tendrás distintos ajustes que podrás cambiar a tu
+                gusto, tanto el orden de las tarjetas como que por ejemplo la cara b salga de fente y la cara a detrás
+            </p>
+            <p>
+                <a href="http://localhost:5000/flash_cards"><button type="button">Probar las flash-cards</button></a>
+            </p>
+        </div>
+    </container>
+    <container class="containers" id="fourth">
+        <div class="left">
+            <img src="../static/img/myprofile.png" alt="categorias del formulario">
+            <img src="../static/img/mytheme.png" alt="dos temas a elegir">
+        </div>
+        <div class="right">
+            <h2>MI PERFIL</h2>
+            <p>
+                En el apartado de mi perfil podrás acceder a tu información personal de usuario asi como modificarla, tanto el email como la contraseña.
+                Podrás también eliminar tu usuario aunque ello conllevaría eliminar todos los paquetes y tarjetas que tienes. Otros apartados en ajustes sería la consultar
+                de todas las tarjetas de tu usuario, así como el acceso a su modificación y la posibilidad de cambiar el tema de colores preferente (hay dos opciones, el oscuro 
+                que es el que está por defecto y el claro, con el fondo blanco)
+            </p>
+        </div>
+    </container>
+</main>
+{%endblock%}

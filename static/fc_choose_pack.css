@@ -1,0 +1,173 @@
+:root {
+    --purple-pastel: #ce97fd;
+    --green-pastel: #6bd59a;
+    --yellow-pastel: #fddf7e;
+    --main-bg-color: #2e2e2e;
+    --nav-bar-color: #1c1c1c;
+    --color-text: #f5f9e9;
+    --color-delete: #ff1930;
+    --msg-color: #b3bfb8;
+    --color-hover: #404e5c;
+    --input-color: #f5f9e9;
+}
+
+body.light {
+    --main-bg-color: #fff;
+    --color-text: #000;
+    --yellow-pastel: #ffb703;
+    --purple-pastel: #7b2cbf;
+    --green-pastel: #007200;
+    --msg-color: #474747;
+    --color-hover: #c4c4c4;
+    --input-color: #fff;
+    --nav-bar-color: #d1d1d1;
+}
+
+body {
+    color: var(--color-text);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+}
+
+#main.no-packs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p.no-packs {
+    text-align: center;
+    color: var(--msg-color);
+    width: fit-content;
+    margin: auto;
+}
+
+button.no-packs {
+    margin: 1em 0;
+    border: .15em solid var(--yellow-pastel);
+    background-color: transparent;
+    color: var(--color-text);
+}
+
+button.no-packs:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--yellow-pastel);
+}
+
+.section {
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+.packages {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.single-package {
+    display: flex;
+    flex-direction: column;
+    border: .15em solid var(--purple-pastel);
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 2px;
+}
+
+.single-package > button {
+    border: .15em solid var(--purple-pastel);
+    color: #f5f9e9;
+    background: none;
+    width: fit-content;
+    margin: auto;
+    border-radius: 5%;
+    margin-bottom: 0.2em;
+}
+
+.single-package > button  {
+    color: var(--color-text);
+}
+
+.single-package > button:hover {
+    background-color: var(--color-hover);
+}
+
+.single-package > a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.single-package > a:hover {
+    text-decoration: underline var(--color-text);
+}
+
+.info-pack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5em;
+}
+
+hr {
+    margin: 0 1em 0.5em 1em;
+    color: var(--purple-pastel);
+}
+
+table {
+    width: auto;
+    margin: 0.75em auto 0.75em;
+    border-collapse: collapse;
+}
+
+th, td, tr {
+    border: 1px solid var(--color-text);
+    padding: 0.5em;
+}
+
+th {
+    border: 1px solid var(--color-text);
+}
+
+td, th {
+    color: var(--color-text);
+}
+
+th {
+    background-color: var(--purple-pastel);
+    color: var(--nav-bar-color);
+}
+
+@media screen and (min-width: 768px) {
+    .packages {
+        width: 75%;
+    }
+
+    .info-pack {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+   .single-package {
+       width: 75%;
+   }
+}
