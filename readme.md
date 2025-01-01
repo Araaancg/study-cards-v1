@@ -1,76 +1,76 @@
-# Proyecto Final - Arancha Carpintero Guardiola
+# Final Project - Arancha Carpintero Guardiola
 
-Este repositorio corresponde al proyecto final del curso de CICE de programación avanzada en Python. 
+This repository corresponds to the final project of the Advanced Python Programming and OOP of CICE, the new technologies school.
 
-Mi proyecto final consiste en una página web que tiene como objetivo agilizar los métodos de estudio mediante el uso de **flashcards**. Estas tarjetas permiten estudiar términos, vocabulario, fechas y eventos que sean necesarios para un examen, trabajo o simple curiosidad. 
+It's a web page designed to streamline study methods using **flashcards**. These cards allow you to study terms, vocabulary, dates, and events needed for an exam, assignment, or simple curiosity.
 
-### Descripción
+### Description
 
-Como usuario, puedes crear las **flashcards** con la información que deseas estudiar en ambas caras. Por ejemplo, si tienes que estudiar los **phrasal verbs**, en el lado A pondrías el **phrasal verb** y en el lado B pondrías su significado o traducción. Una vez creadas las flashcards, puedes ir al apartado de **aprendizaje** para comenzar a estudiar.
+As a user, you can create **flashcards** with the information you want to study on both sides. For example, if you need to study **phrasal verbs**, on side A you would put the **phrasal verb** and on side B you would put its meaning or translation. Once your flashcards are created, you can go to the **learning** section to start studying.
 
-La página web también te permite agrupar las tarjetas en **paquetes** a los que puedes poner un nombre y asociar una categoría. Por ejemplo, podrías crear un paquete llamado **"Phrasal Verbs"** con la categoría **"Vocabulario de inglés"**, de manera que puedas tener todos los contenidos organizados en un solo lugar.
+The web page also allows you to group the cards into **packs** where you can assign a name and category. For example, you could create a pack called **"Phrasal Verbs"** with the category **"English Vocabulary"**, so you can keep all your study content organized in one place.
 
-### Tecnologías utilizadas
+### Technologies Used
 
 - **Frontend**: 
   - HTML
   - CSS
-  - JavaScript (Vanilla, sin frameworks)
+  - JavaScript (Vanilla, no frameworks)
   
 - **Backend**:
-  - **Flask**: Framework web utilizado para el desarrollo del backend.
+  - **Flask**: Web framework used for backend development.
   
-- **Base de datos**:
-  - **MySQL**: Base de datos utilizada para almacenar la información de los usuarios, flashcards, paquetes y categorías.
+- **Database**:
+  - **MySQL**: Database used to store user information, flashcards, packs, and categories.
   
-- **Librerías**:
+- **Libraries**:
   - `Flask`
   - `requests`
-  - `flask_sqlalchemy` (usada como ORM para interactuar con la base de datos)
+  - `flask_sqlalchemy` (used as ORM to interact with the database)
 
-### Requisitos
+### Requirements
 
-#### Librerías externas a instalar
+#### External Libraries to Install
 
-1. Crea un entorno virtual:
+1. Create a virtual environment:
    ```bash
    python3 -m venv venv
    ```
 
-2. Instala las librerías necesarias:
+2. Install the required libraries:
    ```bash
    pip install flask requests flask_sqlalchemy
    ```
 
-#### Ejecutar el proyecto
+#### Running the Project
 
-1. Descarga todo el proyecto y colócalo en tu máquina local.
+1. Download the entire project folder to your local machine.
 
-2. Navega hasta la carpeta del proyecto desde la terminal.
+2. Navigate to the project folder via the terminal.
 
-3. Ejecuta el archivo `main.py` para iniciar la aplicación:
+3. Run the `main.py` file to start the application:
    ```bash
    python main.py
    ```
 
-4. Accede al proyecto desde tu navegador visitando la siguiente URL:
+4. Access the project from your browser by visiting the following URL:
    ```
    http://localhost:5000/welcome
    ```
 
-Desde ahí, podrás acceder a todas las funcionalidades del proyecto.
+From there, you will have access to all the project's features.
 
-### Usuarios pre-creados
+### Pre-created Users
 
 - **test1**: 
-  - Correo: `test1@email.com`
-  - Contraseña: `1234`
+  - Email: `test1@email.com`
+  - Password: `1234`
   
 - **test2**: 
-  - Correo: `test2@email.com`
-  - Contraseña: `1234`
+  - Email: `test2@email.com`
+  - Password: `1234`
 
-### Notas adicionales
+### Additional Notes
 
-- El proyecto está diseñado para ser una herramienta sencilla y eficiente para estudiar mediante flashcards, y está completamente desarrollado con tecnologías web estándar.
-- La base de datos MySQL almacena la información de las tarjetas, usuarios y categorías, lo que permite que el sistema sea flexible y escalable.
+- The project is designed as a simple and efficient tool for studying with flashcards, and it is entirely developed using standard web technologies.
+- The MySQL database stores information about cards, users, and categories, making the system flexible and scalable.
