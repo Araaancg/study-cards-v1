@@ -10,6 +10,8 @@ As a user, you can create **flashcards** with the information you want to study 
 
 The web page also allows you to group the cards into **packs** where you can assign a name and category. For example, you could create a pack called **"Phrasal Verbs"** with the category **"English Vocabulary"**, so you can keep all your study content organized in one place.
 
+---
+
 ### Technologies Used
 
 - **Frontend**: 
@@ -27,6 +29,8 @@ The web page also allows you to group the cards into **packs** where you can ass
   - `Flask`
   - `requests`
   - `flask_sqlalchemy` (used as ORM to interact with the database)
+
+ ---
 
 ### Requirements
 
@@ -60,6 +64,8 @@ The web page also allows you to group the cards into **packs** where you can ass
 
 From there, you will have access to all the project's features.
 
+---
+
 ### Pre-created Users
 
 - **test1**: 
@@ -69,6 +75,8 @@ From there, you will have access to all the project's features.
 - **test2**: 
   - Email: `test2@email.com`
   - Password: `1234`
+
+---
 
 ### Additional Notes
 
